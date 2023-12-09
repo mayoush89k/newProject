@@ -20,7 +20,7 @@ export default function LoginPage({setPageHolder }) {
       error: false,
     },
   ];
-  const { updateUser, getUser} = useUser()
+  const { setUser, user} = useUser()
   const { theme } = useTheme();
   const [inputValues, setInputValues] = useState(form);
   const [usersList, setUsersList] = useState([]);
@@ -48,7 +48,7 @@ export default function LoginPage({setPageHolder }) {
     });;
     if (userMatch) {
       // save the user in local storage and also in state to use it afterwords
-      updateUser(userMatch);
+      setUser(userMatch);
     } else {
       user.username === inputValues[0].value
         ? setInputValues([inputValues[0], { ...inputValues[1], error: true }])
@@ -88,7 +88,7 @@ export default function LoginPage({setPageHolder }) {
         <button type="submit">Login</button>
       </form>
       {/* spinner timeout for login time */}
-      {getUser()?.username && (
+      {user?.username && (
         <div className="spinner">
           login successful
           <Spinner />

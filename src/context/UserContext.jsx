@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const UserContext = createContext();
 
@@ -9,19 +9,22 @@ export const UserProvider = ({ children }) => {
       : {}
   );
 
+  useEffect(() => {
+   localStorage.setItem("user", JSON.stringify(user)); 
+  },[user])
+
   const logOutUser = () => {
-    setUser({});
     localStorage.removeItem("user");
+    setUser({})
   };
   const updateUser = (updatedUser) => {
     setUser(updatedUser);
-    localStorage.setItem("user", JSON.stringify(user)); 
   };
   const getUser = () => {
     return JSON.parse(localStorage.getItem("user"));
   };
   return (
-    <UserContext.Provider value={{ user, getUser, logOutUser, updateUser }}>
+    <UserContext.Provider value={{ user, setUser, getUser, logOutUser, updateUser }}>
       {children}
     </UserContext.Provider>
   );
