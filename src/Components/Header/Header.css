@@ -1,0 +1,58 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+#mode{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    padding: 2px;
+    margin: 2px;
+}
+
+#setting {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#setting-container {
+  position: absolute;
+  top: 10vh;
+  right: 50px;
+  width: 100px;
+  padding: 10px;
+  animation: setting 0.3s ease-in;
+  transform-origin: top;
+}
+@keyframes setting {
+  from {
+    transform: scaleY(0) scaleX(2);
+  }
+  to {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+#setting-container button {
+  padding: 10px;
+  width: 90%;
+  margin: 5px;
+}
+#logo {
+  max-width: 150px;
+}
+#wallpaper {
+  width: auto;
+  height: 80px;
+}
+
+@media (max-width: 500px) {
+  .Header {
+    padding: 1px 2px;
+  }
+}

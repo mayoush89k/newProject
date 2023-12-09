@@ -1,0 +1,44 @@
+#LoginPage form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+#LoginPage input {
+  padding: 10px;
+  font-size: 22px;
+}
+#LoginPage button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+#LoginPage #login-msg {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#LoginPage #error {
+  color: red;
+}
+.spinner {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

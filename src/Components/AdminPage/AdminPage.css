@@ -1,0 +1,22 @@
+#AdminPage{
+    max-height: 50px;
+    padding: 10vw;
+}
+
+.users-list-table{
+    overflow: scroll;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+}
+/* .users-list-table::-webkit-scrollbar {
+    height: 50px;
+} */
+
+#AdminPage table,
+#AdminPage th,
+#AdminPage td{
+    padding: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-weight: bold;
+}

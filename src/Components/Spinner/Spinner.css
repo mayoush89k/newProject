@@ -1,0 +1,61 @@
+
+/* Spinner CSS */
+#three-dots,
+#three-dots::after,
+#three-dots::before {
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 50%;
+  content: "";
+}
+#three-dots {
+  position: relative;
+  margin: 50px;
+  animation: color-dot2 1s infinite;
+}
+#three-dots::after {
+  position: absolute;
+  transform: translate(-20px, 0px);
+  animation: color-dot3 1s infinite;
+}
+#three-dots::before {
+  position: absolute;
+  transform: translate(21px, 0);
+  animation: color-dot1 1s infinite;
+}
+
+@keyframes color-dot2 {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: grey;
+  }
+}
+
+@keyframes color-dot1 {
+  0% {
+    background-color: orange;
+  }
+  50% {
+    background-color: grey;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+@keyframes color-dot3 {
+  0% {
+    background-color: grey;
+  }
+  50% {
+    background-color: gray;
+  }
+  100% {
+    background-color: orange;
+  }
+}
